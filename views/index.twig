@@ -1,0 +1,13 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+  <h1>{{title}}</h1>
+  <form method="post" action="/" class="ui form">
+    <div class="field">
+      <div class="ui action input">
+        <textarea name="message" id="message" rows="2"></textarea>
+        <button type="submit" class="ui button">Submit</button>
+      </div>
+    </div>
+  </form>
+{% endblock %}
