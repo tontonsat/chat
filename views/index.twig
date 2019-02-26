@@ -1,5 +1,4 @@
 {% extends 'layout.twig' %}
-
 {% block body %}
   <h1>{{title}}</h1>
   <form method="post" action="/" class="ui form">
@@ -10,4 +9,17 @@
       </div>
     </div>
   </form>
+  {% if locals.flash and locals.flash.error %}
+    <div class="ui warning message">
+      <i class="close icon"></i>
+      <div class="header">
+        {{ flash.error }}
+      </div>
+    </div>
+  {% endif %}
+  {% if message %}
+    <div class="ui floating message">
+      <p>{{message}}</p>
+    </div>
+  {% endif %}
 {% endblock %}
